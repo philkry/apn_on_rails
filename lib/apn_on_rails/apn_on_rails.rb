@@ -55,8 +55,8 @@ module APN # :nodoc:
 
 end # APN
 
-base = File.join(File.dirname(__FILE__), 'app', 'models', 'apn', 'base.rb')
-require base
+#base = File.join(File.dirname(__FILE__), 'app', 'models', 'apn', 'base.rb')
+#require base
 
 Dir.glob(File.join(File.dirname(__FILE__), 'app', 'models', 'apn', '*.rb')).sort.each do |f|
   require f
