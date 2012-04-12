@@ -1,5 +1,5 @@
 class APN::GroupNotification < APN::Base
-  set_table_name "apn_group_notifications"
+  self.table_name =  "apn_group_notifications"
   
   include ::ActionView::Helpers::TextHelper
   extend ::ActionView::Helpers::TextHelper

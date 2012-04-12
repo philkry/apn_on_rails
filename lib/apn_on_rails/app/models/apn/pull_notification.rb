@@ -1,5 +1,5 @@
 class APN::PullNotification < APN::Base
-  set_table_name "apn_pull_notifications"
+  self.table_name = "apn_pull_notifications"
   
   belongs_to :app, :class_name => 'APN::App'
   
