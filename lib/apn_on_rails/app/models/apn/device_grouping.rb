@@ -8,7 +8,7 @@ class APN::DeviceGrouping < APN::Base
   validates_uniqueness_of :device_id, :scope => :group_id
   
   def self.table_name # :nodoc:
-        "apn_device_groupings"
+        self.to_s.gsub("::", "_").tableize
   end
   
   def same_app_id

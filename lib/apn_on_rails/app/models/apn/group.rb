@@ -10,7 +10,7 @@ class APN::Group < APN::Base
   validates_uniqueness_of :name, :scope => :app_id
   
   def self.table_name # :nodoc:
-        "apn_groups"
+        self.to_s.gsub("::", "_").tableize
   end
     
 end
