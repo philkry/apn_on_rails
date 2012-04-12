@@ -1,4 +1,4 @@
-class APN::GroupNotification < APN::Base
+class APN::GroupNotification < ActiveRecord::Base
   self.table_name =  "apn_group_notifications"
   
   include ::ActionView::Helpers::TextHelper

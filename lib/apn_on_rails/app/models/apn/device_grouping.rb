@@ -1,4 +1,4 @@
-class APN::DeviceGrouping < APN::Base
+class APN::DeviceGrouping < ActiveRecord::Base
   self.table_name =  "apn_device_groupings"
   
   belongs_to :group, :class_name => 'APN::Group'

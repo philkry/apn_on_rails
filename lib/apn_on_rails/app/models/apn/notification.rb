@@ -14,7 +14,7 @@
 # 
 # As each APN::Notification is sent the <tt>sent_at</tt> column will be timestamped,
 # so as to not be sent again.
-class APN::Notification < APN::Base
+class APN::Notification < ActiveRecord::Base
   self.table_name =  "apn_notifications"
   include ::ActionView::Helpers::TextHelper
   extend ::ActionView::Helpers::TextHelper

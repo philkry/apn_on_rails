@@ -1,4 +1,4 @@
-class APN::Group < APN::Base
+class APN::Group < ActiveRecord::Base
   self.table_name =  "apn_groups"
   
   belongs_to :app, :class_name => 'APN::App'

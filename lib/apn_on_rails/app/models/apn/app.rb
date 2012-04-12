@@ -1,4 +1,4 @@
-class APN::App < APN::Base
+class APN::App < ActiveRecord::Base
   self.table_name =  "apn_apps"
 
   has_many :groups, :class_name => 'APN::Group', :dependent => :destroy
