@@ -1,4 +1,6 @@
 class APN::PullNotification < APN::Base
+  set_table_name "apn_pull_notifications"
+  
   belongs_to :app, :class_name => 'APN::App'
   
   validates_presence_of :app_id

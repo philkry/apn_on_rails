@@ -1,4 +1,5 @@
 class APN::App < APN::Base
+  set_table_name "apn_apps"
 
   has_many :groups, :class_name => 'APN::Group', :dependent => :destroy
   has_many :devices, :class_name => 'APN::Device', :dependent => :destroy

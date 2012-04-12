@@ -1,4 +1,5 @@
 class APN::DeviceGrouping < APN::Base
+  set_table_name "apn_device_groupings"
   
   belongs_to :group, :class_name => 'APN::Group'
   belongs_to :device, :class_name => 'APN::Device'
