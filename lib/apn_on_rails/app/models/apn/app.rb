@@ -12,7 +12,7 @@ class APN::App < APN::Base
   end
 
   def self.table_name # :nodoc:
-        self.to_s.gsub("::", "_").tableize
+       "apn_apps"
   end
 
   # Opens a connection to the Apple APN server and attempts to batch deliver

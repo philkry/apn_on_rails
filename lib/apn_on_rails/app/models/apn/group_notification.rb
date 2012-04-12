@@ -10,7 +10,7 @@ class APN::GroupNotification < APN::Base
   validates_presence_of :group_id
   
   def self.table_name # :nodoc:
-        self.to_s.gsub("::", "_").tableize
+        "apn_group_notifications"
   end
   
   def devices

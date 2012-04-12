@@ -23,7 +23,7 @@ class APN::Notification < APN::Base
   has_one    :app,    :class_name => 'APN::App', :through => :device
   
   def self.table_name # :nodoc:
-        self.to_s.gsub("::", "_").tableize
+        "apn_notifications"
   end
   
   # Stores the text alert message you want to send to the device.
