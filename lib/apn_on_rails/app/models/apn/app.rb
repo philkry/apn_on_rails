@@ -11,6 +11,10 @@ class APN::App < APN::Base
     (RAILS_ENV == 'production' ? apn_prod_cert : apn_dev_cert)
   end
 
+  def self.table_name # :nodoc:
+        self.to_s.gsub("::", "_").tableize
+  end
+
   # Opens a connection to the Apple APN server and attempts to batch deliver
   # an Array of group notifications.
   #
