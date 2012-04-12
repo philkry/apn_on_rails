@@ -3,6 +3,10 @@ class APN::PullNotification < APN::Base
   
   validates_presence_of :app_id
 
+  def self.table_name # :nodoc:
+        self.to_s.gsub("::", "_").tableize
+  end
+
   def self.latest_since(app_id, since_date=nil)
     if since_date
       res = first(:order => "created_at DESC", 
