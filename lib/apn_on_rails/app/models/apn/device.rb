@@ -24,10 +24,6 @@ class APN::Device < APN::Base
   # application by Apple.
   attr_accessor :feedback_at
   
-  def self.table_name # :nodoc:
-        self.to_s.gsub("::", "_").tableize
-  end
-  
   # Stores the token (Apple's device ID) of the iPhone (device).
   # 
   # If the token comes in like this:
