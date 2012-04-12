@@ -8,9 +8,5 @@ class APN::Group < APN::Base
   
   validates_presence_of :app_id
   validates_uniqueness_of :name, :scope => :app_id
-  
-  def self.table_name # :nodoc:
-        self.to_s.gsub("::", "_").tableize
-  end
     
 end
