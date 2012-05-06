@@ -58,11 +58,6 @@ class APN::Notification < ActiveRecord::Base
       result['aps']['sound'] = self.sound if self.sound.is_a? String
       result['aps']['sound'] = "1.aiff" if self.sound.is_a?(TrueClass)
     end
-    if self.custom_properties
-      self.custom_properties.each do |key,value|
-        result["#{key}"] = "#{value}"
-      end
-    end
     result
   end
   
